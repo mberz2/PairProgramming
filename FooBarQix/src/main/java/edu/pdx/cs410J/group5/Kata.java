@@ -38,26 +38,23 @@ public class Kata {
         if(arg % 7 == 0)
           output.append("Qix");
 
-        //System.out.println("After divisible = " + output);
-
         char[] chars = args[0].toCharArray();
 
         //For each digit 3, 5, 7, add “Foo”, “Bar”, “Qix” in the digits order.
-		  for (int i = 0; i < chars.length; ++i){
+		  for (char aChar : chars) {
 			  //System.out.println(chars[i]);
-			  if(chars[i] == '3')
+			  if (aChar == '3')
 				  output.append("Foo");
-			  else if(chars[i] == '5')
+			  else if (aChar == '5')
 				  output.append("Bar");
-			  else if(chars[i] == '7')
+			  else if (aChar == '7')
 				  output.append("Qix");
-			  else if(chars[i] == '0')
-			      output.append("*");
-			  else if(output.indexOf("Foo") < 0 && output.indexOf("Bar") < 0 && output.indexOf("Qix") < 0 )
-			      output.append(chars[i]);
+			  else if (aChar == '0')
+				  output.append("*");
+			  else if (output.indexOf("Foo") < 0 && output.indexOf("Bar")
+					  < 0 && output.indexOf("Qix") < 0)
+				  output.append(aChar);
 		  }
-
-
 	  }
 
 	  System.out.println("Input: " + args[0] + "\nOutput: " + output);
