@@ -7,8 +7,8 @@ package edu.pdx.cs410J.group5;
  * class (and its tests).
  */
 public class Kata {
-                                                                                    
 
+  //test change by Madisen
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
     System.exit(1);
