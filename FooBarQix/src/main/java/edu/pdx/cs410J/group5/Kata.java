@@ -12,13 +12,13 @@ public class Kata {
 	If the number is divisible by 3, write “Foo” instead of the number
 	If the number is divisible by 5, add “Bar”
 	If the number is divisible by 7, add “Qix”
-	For each digit 3, 5, 7, add “Foo”, “Bar”, “Qix” in the digits order.
+
 	 */
 
   public static void main(String[] args) {
 
     int arg = Integer.valueOf(args[0]);
-    String output = null;
+    StringBuilder output = new StringBuilder();
 
   	//Check number of command line args
 	  if (args.length == 0){
@@ -32,11 +32,27 @@ public class Kata {
 
         //divisibility
         if(arg % 3 == 0)
-          output = "Foo";
+          output.append("Foo");
         if(arg % 5 == 0)
-          output = output + "Bar";
+          output.append("Bar");
         if(arg % 7 == 0)
-          output = output + "Qix";
+          output.append("Qix");
+
+        //System.out.println("After divisible = " + output);
+
+        char[] chars = args[0].toCharArray();
+
+        //For each digit 3, 5, 7, add “Foo”, “Bar”, “Qix” in the digits order.
+		  for (int i = 0; i < chars.length; ++i){
+			  //System.out.println(chars[i]);
+			  if(chars[i] == '3')
+				  output.append("Foo");
+			  if(chars[i] == '5')
+				  output.append("Bar");
+			  if(chars[i] == '7')
+				  output.append("Qix");
+		  }
+
 	  }
 
 	  System.out.println(output);
