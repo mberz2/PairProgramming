@@ -1,4 +1,4 @@
-package edu.pdx.cs410J.group5;
+	package edu.pdx.cs410J.group5;
 
 /**
  * A class for getting started with a code kata
@@ -8,9 +8,31 @@ package edu.pdx.cs410J.group5;
  */
 public class Kata {
 
-  //test change by Madisen
+	/*
+	If the number is divisible by 3, write “Foo” instead of the number
+	If the number is divisible by 5, add “Bar”
+	If the number is divisible by 7, add “Qix”
+	For each digit 3, 5, 7, add “Foo”, “Bar”, “Qix” in the digits order.
+	 */
+
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+
+  	//Check number of command line args
+	  if (args.length == 0){
+		  System.err.println("Missing command line arguments");
+		  System.exit(0);
+	  } else if (args.length > 1) {
+	  	System.err.println("Too many command line arguments");
+	  	System.exit(0);
+	  } else {
+	  	//Correct number of command line args
+
+
+
+
+
+	  }
+
     System.exit(1);
   }
 }
