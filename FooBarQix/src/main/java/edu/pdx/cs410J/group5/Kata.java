@@ -47,15 +47,20 @@ public class Kata {
 			  //System.out.println(chars[i]);
 			  if(chars[i] == '3')
 				  output.append("Foo");
-			  if(chars[i] == '5')
+			  else if(chars[i] == '5')
 				  output.append("Bar");
-			  if(chars[i] == '7')
+			  else if(chars[i] == '7')
 				  output.append("Qix");
+			  else if(chars[i] == '0')
+			      output.append("*");
+			  else if(output.indexOf("Foo") < 0 && output.indexOf("Bar") < 0 && output.indexOf("Qix") < 0 )
+			      output.append(chars[i]);
 		  }
+
 
 	  }
 
-	  System.out.println(output);
+	  System.out.println("Input: " + args[0] + "\nOutput: " + output);
 
     System.exit(1);
   }
