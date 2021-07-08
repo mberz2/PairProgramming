@@ -30,7 +30,7 @@ public class Kata {
 	  } else {
 	  	//Correct number of command line args
 
-        //divisible by 3
+        //divisibility
         if(arg % 3 == 0)
           output = "Foo";
         if(arg % 5 == 0)
